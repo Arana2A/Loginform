@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>log In form</title>
+</head>
+<body>
+    <div class="box">
+        <h2>LOG IN</h2>
+        <form action="" onsubmit="logIn(); return false;">
+            <table>
+                <tr><td><input type="text" name="log_username" id="username_log" placeholder="Username" autocomplete="username" required></td></tr>
+                <tr><td><input type="password" name="log_password" id="password_log" placeholder="Password" autocomplete="current-password" required></td></tr>
+                <tr><td><button type="submit">Log In</button></td></tr>
+            </table>
+            <p>Create account?<a href="index.html">Sign Up.</a></p>
+        </form>
+    </div>
+</body>
+
+<script>
+    function SignUp(){
+        const username = document.getElementById("u_sername").value;
+        const password = document.getElementById("p_assword").value;
+    
+        let data = JSON.parse(localStorage.getItem('data')) || [];
+        data.push({
+            u_username: username,
+            p_password: password
+        });
+    
+        localStorage.setItem('data', JSON.stringify(data));
+        console.log(username, password);
+    
+        document.getElementById("u_sername").value = '';
+        document.getElementById("p_assword").value = '';
+        alert("You have been successfully signed up!");
+    }
+    
+    function logIn(){
+        const username = document.getElementById("username_log").value;
+        const password = document.getElementById("password_log").value;
+    
+        const data = JSON.parse(localStorage.getItem('data')) || [];
+        const user = data.find(user => user.u_username === username && user.p_password === password);
+    
+        if (user) {
+            alert("Login successful");
+            console.log("Logged in user:", username);
+        } else {
+            alert("Invalid credentials");
+            console.log("No matching user found");
+        }
+    }
+    </script>
+    
+</html>

@@ -1,0 +1,88 @@
+body{
+    background-image: url(2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.box{
+    background-image: url(2.jpg);
+    opacity: 20px;
+    width: 30%;
+    height: 400px;
+    margin:0;
+    float: left;
+    margin-top: 8%;
+    margin-left: 20%;
+    box-shadow: -3px 2px 15px rgb(136, 131, 131);
+   
+}
+h2{
+    text-align: center;
+    font-family:sans-serif;
+    font-weight:800;
+    font-size: 28px;
+    margin-top: 30px;
+}
+
+input{
+    width: 80%;
+    padding:3%;
+    margin-top:18px;
+    float: left;
+    margin-left: 60px;
+}
+button{
+    width: 210px;
+    border-radius: 5px;
+    height: 30px;
+    float: left;
+    margin-left: 75px;
+    margin-top: 20px;
+    background:linear-gradient(to bottom,#f6d6cb 0%, #fc815f 100%);border-color:#fea68c;
+}
+
+p{
+    margin-left:80px;
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+a:hover{
+    color: red;
+}
+
+.right{
+    background:linear-gradient(to bottom,#fbcebd 0%, #f68363);
+    width: 30%;
+    height: 400px;
+    float:right;
+    margin:0;
+    margin-top: 8%;
+    margin-right: 20%;
+    box-shadow: -3px 2px 15px rgb(157, 152, 152);
+    
+}
+
+h1{
+    font-family:sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 35%;
+    color:rgb(255, 255, 255) ;
+}
+
+.login-btn {
+    margin-top: 5px;
+    width: 100px;
+    margin-left: 35%;
+    height: 25px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #f6d6cb 0%, #fc815f 100%);
+    border: 1px solid #dddada;
+    color: rgb(0, 0, 0);
+  }
+  .login-btn:hover {
+    background: linear-gradient(to bottom, #fc815f 0%, #f6d6cb 100%);
+  }
